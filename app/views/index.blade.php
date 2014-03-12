@@ -24,9 +24,9 @@
             </div>
             <div class="panel-body">
                 <div class="list-group">
-                    @foreach ($discursantes as $discurso)
+                    @foreach ($membros as $membro)
                     <p class="list-group-item">
-                        {{ $discurso->membro->nome_membro }}
+                        <i class="fa fa-user fa-fw"></i> {{ $membro->nome_membro }}
                     </p>
                     @endforeach
                 </div>
