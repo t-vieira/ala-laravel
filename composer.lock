@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "1629abbb640a9fe0280e95fc215de768",
+    "hash": "79da4ce497ff81cf3665cef3efa21365",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -342,6 +342,47 @@
             "time": "2014-02-28 22:07:47"
         },
         {
+            "name": "loic-sharma/profiler",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/loic-sharma/profiler.git",
+                "reference": "6db72a07c39c4b83d70fd6432cfb952e0eac61fc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/loic-sharma/profiler/zipball/6db72a07c39c4b83d70fd6432cfb952e0eac61fc",
+                "reference": "6db72a07c39c4b83d70fd6432cfb952e0eac61fc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "1.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Profiler": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Loic Sharma"
+                }
+            ],
+            "description": "A PHP 5.3 profiler based off of Laravel 3's Anbu.",
+            "keywords": [
+                "anbu",
+                "laravel",
+                "profiler"
+            ],
+            "time": "2013-06-17 17:00:15"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.7.0",
             "source": {
@@ -499,6 +540,121 @@
             "time": "2013-08-25 17:11:40"
         },
         {
+            "name": "orchestra/asset",
+            "version": "v2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orchestral/asset.git",
+                "reference": "331bd209b293f2d0807fd7025b32f694c68f8e95"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orchestral/asset/zipball/331bd209b293f2d0807fd7025b32f694c68f8e95",
+                "reference": "331bd209b293f2d0807fd7025b32f694c68f8e95",
+                "shasum": ""
+            },
+            "require": {
+                "orchestra/support": "2.0.*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "illuminate/container": "4.0.*",
+                "mockery/mockery": "0.8.0"
+            },
+            "suggest": {
+                "laravel/framework": "Allow using orchestra/asset component outside of Orchestra Platform 2",
+                "orchestra/foundation": "Allow using orchestra/asset with Orchestra Platform 2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Orchestra\\Asset": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mior Muhammad Zaki",
+                    "email": "crynobone@gmail.com",
+                    "homepage": "https://github.com/crynobone"
+                }
+            ],
+            "description": "Orchestra Platform 2 Asset Component",
+            "homepage": "http://orchestraplatform.com/docs/2.0/components/asset/",
+            "keywords": [
+                "asset",
+                "laravel",
+                "orchestra-platform",
+                "orchestral"
+            ],
+            "time": "2013-10-21 03:15:17"
+        },
+        {
+            "name": "orchestra/support",
+            "version": "v2.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orchestral/support.git",
+                "reference": "e95bea2b24f73e414249c9f6f00c5495e6faf2a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orchestral/support/zipball/e95bea2b24f73e414249c9f6f00c5495e6faf2a9",
+                "reference": "e95bea2b24f73e414249c9f6f00c5495e6faf2a9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "illuminate/support": "4.0.*",
+                "mockery/mockery": "0.8.0",
+                "patchwork/utf8": "1.1.*"
+            },
+            "suggest": {
+                "laravel/framework": "Allow using orchestra/support component outside of Orchestra Platform 2",
+                "orchestra/foundation": "Allow using orchestra/support with Orchestra Platform 2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Orchestra\\Support": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mior Muhammad Zaki",
+                    "email": "crynobone@gmail.com",
+                    "homepage": "https://github.com/crynobone"
+                }
+            ],
+            "description": "Orchestra Platform 2 Support Component",
+            "homepage": "http://orchestraplatform.com/docs/2.0/components/support/",
+            "keywords": [
+                "laravel",
+                "orchestra-platform",
+                "orchestral"
+            ],
+            "time": "2013-10-21 01:12:20"
+        },
+        {
             "name": "patchwork/utf8",
             "version": "v1.1.20",
             "source": {
@@ -548,6 +704,53 @@
                 "utf8"
             ],
             "time": "2014-03-01 20:01:07"
+        },
+        {
+            "name": "pda/pheanstalk",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pda/pheanstalk.git",
+                "reference": "56c44c947cf44a85c8d639209361da5f67b6fbff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pda/pheanstalk/zipball/56c44c947cf44a85c8d639209361da5f67b6fbff",
+                "reference": "56c44c947cf44a85c8d639209361da5f67b6fbff",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Pheanstalk": "classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Annesley",
+                    "email": "paul@annesley.cc",
+                    "homepage": "http://paul.annesley.cc/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP client for beanstalkd queue",
+            "homepage": "https://github.com/pda/pheanstalk",
+            "keywords": [
+                "beanstalkd"
+            ],
+            "time": "2014-01-20 02:42:16"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -1568,9 +1771,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "pda/pheanstalk": 20
+    },
     "platform": [
 
     ],
