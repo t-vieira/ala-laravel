@@ -9,7 +9,9 @@ class IndexController extends \BaseController {
 	 */
 	public function index()
 	{
-	    $this->layout->content =  View::make('index');
+        $discursantes = Discursos::all();
+
+	    $this->layout->content =  View::make('index')->with('discursantes', $discursantes);
 	}
 
 	/**

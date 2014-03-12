@@ -6,6 +6,6 @@ class Discursos extends Illuminate\Database\Eloquent\Model
 
     public function membro()
     {
-        $this->hasOne('Membros', 'membros_id', 'id');
+        return $this->hasOne('Membros', 'id', 'membro_id');
     }
 }

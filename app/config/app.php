@@ -107,7 +107,6 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
         'Orchestra\Asset\AssetServiceProvider',
-        'Profiler\ProfilerServiceProvider',
 
 	),
 
@@ -176,7 +175,6 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
         'Asset' 		  => 'Orchestra\Support\Facades\Asset',
         'Basset' 		  => 'Basset\Facade',
-        'Profiler'        => 'Profiler\Facades\Profiler',
 
 	),
 
