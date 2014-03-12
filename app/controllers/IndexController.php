@@ -9,9 +9,13 @@ class IndexController extends \BaseController {
 	 */
 	public function index()
 	{
-        $membros = Membros::take(10)->get();
+        $dados = array();
 
-	    $this->layout->content =  View::make('index')->with('membros', $membros);
+        $dados['membros'] = Membros::take(10)->get();
+
+        $dados['discursantes'] = Discursos::take(10)->orderBy('data_discurso', 'asc')->distinct('membro_id')->get();
+
+	    $this->layout->content =  View::make('index')->with('dados', $dados);
 	}
 
 	/**

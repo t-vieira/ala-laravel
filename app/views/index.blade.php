@@ -11,7 +11,12 @@
             </div>
             <div class="panel-body">
                 <div class="list-group">
-
+                    @foreach ($dados['discursantes'] as $discursante)
+                        <p class="list-group-item">
+                            <i class="fa fa-user fa-fw"></i> {{ $discursante->membro->nome_membro }}
+                            <span class="pull-right text-muted small"><em>{{ $discursante->data_discurso }}</em></span>
+                        </p>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -24,7 +29,7 @@
             </div>
             <div class="panel-body">
                 <div class="list-group">
-                    @foreach ($membros as $membro)
+                    @foreach ($dados['membros'] as $membro)
                     <p class="list-group-item">
                         <i class="fa fa-user fa-fw"></i> {{ $membro->nome_membro }}
                     </p>
