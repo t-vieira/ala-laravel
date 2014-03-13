@@ -12,3 +12,5 @@
 */
 
 Route::resource('/', 'IndexController');
+
+Route::controller('citacoes/todascitacoes', 'CitacoesController');
