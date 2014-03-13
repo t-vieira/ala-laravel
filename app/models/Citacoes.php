@@ -6,11 +6,11 @@ class Citacoes extends Illuminate\Database\Eloquent\Model
 
     public function categoria()
     {
-        $this->hasOne('Categorias', 'categoria_id');
+        return $this->hasOne('categorias', 'id', 'categoria_id');
     }
 
     public function autor()
     {
-        $this->hasOne('Autores', 'autor_id');
+        return $this->hasOne('autores', 'id', 'autor_id');
     }
 }
