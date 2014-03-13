@@ -11,9 +11,15 @@ class IndexController extends \BaseController {
 	{
         $dados = array();
 
-        $dados['membros'] = Membros::take(10)->get();
+        $dados['membros'] = Membros::take(10)->orderBy('id', 'desc')->get();
 
-        $dados['discursantes'] = Discursos::take(10)->orderBy('data_discurso', 'asc')->distinct('membro_id')->get();
+        $dados['discursantes'] = Discursos::take(10)->distinct('membro_id')->orderBy('data_discurso', 'asc')->get();
+
+        $dados['citacoes'] = Citacoes::take(10)->orderBy('id', 'desc')->get();
+
+        $dados['categorias'] = Categorias::take(10)->orderBy('id', 'desc')->get();
+
+        $dados['autores'] = Autores::take(10)->orderBy('id', 'desc')->get();
 
 	    $this->layout->content =  View::make('index')->with('dados', $dados);
 	}
