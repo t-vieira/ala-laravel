@@ -39,4 +39,57 @@
         </div>
     </div>
 
+    <div class="col-lg-8">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <i class="fa fa-quote-left fa-fw"></i> Últimas Citações Cadastradas
+            </div>
+            <div class="panel-body">
+                <div class="list-group">
+                    @foreach ($dados['citacoes'] as $citacao)
+                        <p class="list-group-item">
+                            <i class="fa fa-quote-right"></i> {{ substr($citacao->texto_citacao, 0, 100) }} ...
+                            <span class="pull-right text-muted small"><em>{{ $citacao->autor->nome_autor }}</em></span>
+                        </p>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <i class="fa fa-tags fa-fw"></i> Últimas Categorias Cadastradas
+            </div>
+            <div class="panel-body">
+                <div class="list-group">
+                    @foreach ($dados['categorias'] as $categoria)
+                    <p class="list-group-item">
+                        <i class="fa fa-tag fa-fw"></i> {{ $categoria->nome_categoria }}
+                    </p>
+                    @endforeach
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <i class="fa fa-smile-o fa-fw"></i> Últimos Autores Cadastrados
+            </div>
+            <div class="panel-body">
+                <div class="list-group">
+                    @foreach ($dados['autores'] as $autor)
+                    <p class="list-group-item">
+                        {{ $autor->nome_autor }}
+                    </p>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+
 @endsection
