@@ -13,4 +13,9 @@ class Citacoes extends Illuminate\Database\Eloquent\Model
     {
         return $this->hasOne('autores', 'id', 'autor_id');
     }
+
+    public function contarCategoria($id)
+    {
+        return Citacoes::where('categoria_id', '=', $id)->count();
+    }
 }

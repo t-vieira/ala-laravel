@@ -50,7 +50,7 @@
                         <a href="#">Registrar</a>
                     </li>
                     <li>
-                        <a href="todascitacoes">Todas as Citações</a>
+                        <a href="citacoes/todascitacoes">Todas as Citações</a>
                     </li>
                 </ul>
             </li>
