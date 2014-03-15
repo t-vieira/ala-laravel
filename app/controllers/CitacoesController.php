@@ -19,6 +19,29 @@ class CitacoesController extends \BaseController {
         $this->layout->content =  View::make('citacoes.todascitacoes')->with('dados', $dados);
 	}
 
+    public function getRegistrarcitacao()
+    {
+        $dados = array();
+
+        $categorias = Categorias::orderBy('nome_categoria', 'asc')->get();
+
+        $dados['categorias'] = array();
+
+        foreach ($categorias as $categoria) {
+            $dados['categorias'][$categoria->id] = $categoria->nome_categoria;
+        }
+
+        $autores = Autores::orderBy('nome_autor', 'asc')->get();
+
+        $dados['autor'] = array();
+
+        foreach ($autores as $autor) {
+            $dados['autor'][$autor->id] = $autor->nome_autor;
+        }
+
+        $this->layout->content = View::make('citacoes.registrarcitacao')->with('dados', $dados);
+    }
+
     static function contarCategoria($id = null)
     {
         if (is_null($id)) {

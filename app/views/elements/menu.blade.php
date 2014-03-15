@@ -47,10 +47,10 @@
                 <a href="#"><i class="fa fa-quote-right fa-fw"></i> Citações<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="#">Registrar</a>
+                        <a href="{{ URL::to('/') }}/citacoes/registrarcitacao">Registrar</a>
                     </li>
                     <li>
-                        <a href="citacoes/todascitacoes">Todas as Citações</a>
+                        <a href="{{ URL::to('/') }}/citacoes/todascitacoes">Todas as Citações</a>
                     </li>
                 </ul>
             </li>
