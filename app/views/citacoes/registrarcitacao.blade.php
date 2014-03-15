@@ -10,6 +10,10 @@
 				Use o formulário abaixo para cadastrar uma citação
 			</div>
 
+			@if (Session::has('alerta'))
+			    {{Session::get('alerta')}}
+			@endif
+
 			<div class="panel-body">
 				<div class="row">
 					<div class="col-lg-3">
@@ -24,14 +28,14 @@
 					    <div class="form-group">
 
 					        {{Form::label('categoria_citacao', 'Categoria da Citação')}}
-					        {{Form::select('categoria_id', $dados['categorias'], null, $atributes = array('class' => 'form-control', 'id' => 'categoria_id'))}}
+					        {{Form::select('categoria_id', $dados['categorias'], null, $atributes = array('class' => 'form-control', 'id' => 'categoria_id', 'data-placeholder' => 'Selecione uma Categoria...'))}}
 
 					    </div>
 
 					    <div class="form-group">
 
 					        {{Form::label('autor_id', 'Autor da Citação')}}
-					        {{Form::select('autor_id', $dados['autor'], null, $atributes = array('class' => 'form-control', 'id' => 'autor_id'))}}
+					        {{Form::select('autor_id', $dados['autor'], null, $atributes = array('class' => 'form-control', 'id' => 'autor_id', 'data-placeholder' => 'Selecione um Autor...'))}}
 
 					    </div>
 

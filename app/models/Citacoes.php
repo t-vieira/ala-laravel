@@ -4,6 +4,8 @@ class Citacoes extends Illuminate\Database\Eloquent\Model
 {
     protected $guarded = array('id');
 
+    public $timestamps = false;
+
     public function categoria()
     {
         return $this->hasOne('categorias', 'id', 'categoria_id');

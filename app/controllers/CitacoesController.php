@@ -27,6 +27,8 @@ class CitacoesController extends \BaseController {
 
         $dados['categorias'] = array();
 
+        $dados['categorias'][''] = '';
+
         foreach ($categorias as $categoria) {
             $dados['categorias'][$categoria->id] = $categoria->nome_categoria;
         }
@@ -35,11 +37,34 @@ class CitacoesController extends \BaseController {
 
         $dados['autor'] = array();
 
+        $dados['autor'][''] = '';
+
         foreach ($autores as $autor) {
             $dados['autor'][$autor->id] = $autor->nome_autor;
         }
 
         $this->layout->content = View::make('citacoes.registrarcitacao')->with('dados', $dados);
+    }
+
+    public function postRegistrarcitacao()
+    {
+        $citacao = new Citacoes(Input::all());
+        $citacao->save();
+
+        if ($citacao) {
+            return Redirect::to('citacoes/registrarcitacao')
+                                ->with('alerta', '<div class="alert alert-success alert-dismissable">
+								    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								    Citação Cadastrada com Sucesso!
+								  </div>');
+        } else {
+            return Redirect::to('citacoes/registrarcitacao')
+                                 ->with('alerta', '<div class="alert alert-success alert-dismissable">
+								    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								    Houve uma erro no registro da citação. Tente novamente!
+								  </div>');
+        }
+
     }
 
     static function contarCategoria($id = null)

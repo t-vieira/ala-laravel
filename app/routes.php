@@ -15,5 +15,9 @@ Route::resource('/', 'IndexController');
 
 Route::controller('citacoes/todascitacoes', 'CitacoesController');
 
-Route::get('citacoes/registrarcitacao', 'CitacoesController@getRegistrarcitacao');
+//Route::get('citacoes/registrarcitacao', 'CitacoesController@getRegistrarcitacao');
+//
+//Route::post('citacoes/registrarcitacao', 'CitacoesController@postRegistrarcitacao');
+
+Route::controller('citacoes', 'CitacoesController');
 
