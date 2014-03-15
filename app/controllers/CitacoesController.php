@@ -11,6 +11,7 @@ class CitacoesController extends \BaseController {
         if (is_null($id)) {
             $dados['citacoes'] = Citacoes::orderBy('id', 'desc')->get();
         } else {
+            $id = base64_decode($id);
             $dados['citacoes'] = Citacoes::where('categoria_id', '=', $id)->get();
         }
 

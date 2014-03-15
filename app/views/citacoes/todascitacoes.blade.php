@@ -9,7 +9,7 @@
         <ul class="nav nav-pills">
             <li class="active"><a href="{{ URL::to('/') }}/citacoes/todascitacoes"><span class="badge pull-right">{{ CitacoesController::contarCategoria() }}</span>Todos</a></li>
             @foreach ($dados['categorias'] as $categoria)
-            <li><a href="{{ URL::to('/') }}/citacoes/todascitacoes/index/{{ $categoria->id }}"><span class="badge pull-right">{{ CitacoesController::contarCategoria($categoria->id) }}</span>{{ $categoria->nome_categoria }}</a></li>
+            <li><a href="{{ URL::to('/') }}/citacoes/todascitacoes/index/{{ base64_encode($categoria->id) }}"><span class="badge pull-right">{{ CitacoesController::contarCategoria($categoria->id) }}</span>{{ $categoria->nome_categoria }}</a></li>
             @endforeach
         </ul>
 
