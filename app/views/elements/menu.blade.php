@@ -2,7 +2,7 @@
     <div class="sidebar-collapse">
         <ul class="nav" id="side-menu">
             <li>
-                <a href="#"><i class="fa fa-dashboard fa-fw"></i> Painel Principal</a>
+                <a href="{{URL::to('/')}}"><i class="fa fa-dashboard fa-fw"></i> Painel Principal</a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-users fa-fw"></i> Membros<span class="fa arrow"></span></a>
