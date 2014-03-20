@@ -25,7 +25,7 @@
                         <a href="#">Editar</a>
                     </li>
                     <li>
-                        <a href="#">Discursantes Antigos</a>
+                        <a href="{{URL::to('/')}}/discursos/discursantesantigos">Discursantes Antigos</a>
                     </li>
                     <li>
                         <a href="#">Todos os Discursantes</a>

@@ -13,7 +13,7 @@
                 <div class="list-group">
                     @foreach ($dados['discursantes'] as $discursante)
                         <p class="list-group-item">
-                            <i class="fa fa-user fa-fw"></i> {{ $discursante->membro->nome_membro }}
+                            <i class="fa fa-user fa-fw"></i> {{ $discursante->nome_membro }}
                             <span class="pull-right text-muted small"><em>{{ Datas::calcular_diferenca($discursante->data_discurso) }}</em></span>
                         </p>
                     @endforeach

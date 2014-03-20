@@ -40,6 +40,7 @@
                 </div>
             </div>
         </div>
+        {{$dados['citacoes']->links()}}
     </div>
 </div>
 

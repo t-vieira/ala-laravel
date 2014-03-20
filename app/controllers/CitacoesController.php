@@ -2,6 +2,11 @@
 
 class CitacoesController extends \BaseController {
 
+    public function __construct()
+    {
+
+    }
+
 	public function getIndex($id = null)
 	{
         $dados = array();
@@ -9,10 +14,10 @@ class CitacoesController extends \BaseController {
         $dados['categorias'] = Categorias::orderBy('nome_categoria', 'asc')->get();
 
         if (is_null($id)) {
-            $dados['citacoes'] = Citacoes::orderBy('id', 'desc')->get();
+            $dados['citacoes'] = Citacoes::orderBy('id', 'desc')->paginate(8);
         } else {
             $id = base64_decode($id);
-            $dados['citacoes'] = Citacoes::where('categoria_id', '=', $id)->get();
+            $dados['citacoes'] = Citacoes::where('categoria_id', '=', $id)->paginate(10);
         }
 
 

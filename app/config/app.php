@@ -175,7 +175,6 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
         'Asset' 		  => 'Orchestra\Support\Facades\Asset',
         'Basset' 		  => 'Basset\Facade',
-
 	),
 
 );

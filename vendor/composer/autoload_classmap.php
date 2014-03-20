@@ -143,6 +143,7 @@ return array(
     'Illuminate\\Database\\Eloquent\\Relations\\MorphOne' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Relations/MorphOne.php',
     'Illuminate\\Database\\Eloquent\\Relations\\MorphOneOrMany' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Relations/MorphOneOrMany.php',
     'Illuminate\\Database\\Eloquent\\Relations\\MorphPivot' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Relations/MorphPivot.php',
+    'Illuminate\\Database\\Eloquent\\Relations\\MorphTo' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Relations/MorphTo.php',
     'Illuminate\\Database\\Eloquent\\Relations\\MorphToMany' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Relations/MorphToMany.php',
     'Illuminate\\Database\\Eloquent\\Relations\\Pivot' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Relations/Pivot.php',
     'Illuminate\\Database\\Eloquent\\Relations\\Relation' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Relations/Relation.php',

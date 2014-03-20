@@ -13,7 +13,26 @@ class IndexController extends \BaseController {
 
         $dados['membros'] = Membros::take(10)->orderBy('id', 'desc')->get();
 
-        $dados['discursantes'] = Discursos::take(10)->distinct('membro_id')->orderBy('data_discurso', 'asc')->get();
+        $dados['discursantes'] = DB::select(DB::raw('SELECT
+                                d1.id,
+                                d1.membro_id,
+                                m.nome_membro,
+                                d1.data_discurso,
+                                d1.tema_discurso
+                                FROM discursos d1
+                                INNER JOIN
+                                (
+                                SELECT
+                                membro_id,
+                                MAX(data_discurso) LastDataDiscurso
+                                FROM discursos
+                                GROUP BY membro_id
+                                ) d2
+                                ON d1.membro_id = d2.membro_id
+                                AND d1.data_discurso = d2.LastDataDiscurso
+                                INNER JOIN
+                                membros m on d1.membro_id = m.id
+                                ORDER BY d1.data_discurso ASC LIMIT 0, 10'));
 
         $dados['citacoes'] = Citacoes::take(10)->orderBy('id', 'desc')->get();
 
