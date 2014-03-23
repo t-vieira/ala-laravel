@@ -16,8 +16,8 @@ class CitacoesController extends \BaseController {
         if (is_null($id)) {
             $dados['citacoes'] = Citacoes::orderBy('id', 'desc')->paginate(8);
         } else {
-            $id = base64_decode($id);
-            $dados['citacoes'] = Citacoes::where('categoria_id', '=', $id)->paginate(10);
+            $id = Hashids::decrypt($id);
+            $dados['citacoes'] = Citacoes::where('categoria_id', '=', $id[0])->paginate(10);
         }
 
 

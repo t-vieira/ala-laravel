@@ -107,6 +107,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
         'Orchestra\Asset\AssetServiceProvider',
+        'Mitch\Hashids\HashidsServiceProvider',
 
 	),
 
@@ -175,6 +176,7 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
         'Asset' 		  => 'Orchestra\Support\Facades\Asset',
         'Basset' 		  => 'Basset\Facade',
+        'Hashids'         => 'Mitch\Hashids\Hashids',
 	),
 
 );

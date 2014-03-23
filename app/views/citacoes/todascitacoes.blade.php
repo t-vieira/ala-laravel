@@ -7,10 +7,14 @@
     <div class="col-lg-12">
 
         <ul class="nav nav-pills">
-            <li class="active"><a href="{{ URL::to('/') }}/citacoes/todascitacoes"><span class="badge pull-right">{{ CitacoesController::contarCategoria() }}</span>Todos</a></li>
-            @foreach ($dados['categorias'] as $categoria)
-            <li><a href="{{ URL::to('/') }}/citacoes/todascitacoes/index/{{ base64_encode($categoria->id) }}"><span class="badge pull-right">{{ CitacoesController::contarCategoria($categoria->id) }}</span>{{ $categoria->nome_categoria }}</a></li>
-            @endforeach
+            @if (URL::current() === URL::to('/').'/citacoes/todascitacoes')
+                <li class="active"><a href="{{ URL::to('/') }}/citacoes/todascitacoes"><span class="badge pull-right">{{ CitacoesController::contarCategoria() }}</span>Todos</a></li>
+                @foreach ($dados['categorias'] as $categoria)
+                <li><a href="{{ URL::to('/') }}/citacoes/todascitacoes/index/{{ Hashids::encrypt($categoria->id) }}"><span class="badge pull-right">{{ CitacoesController::contarCategoria($categoria->id) }}</span>{{ $categoria->nome_categoria }}</a></li>
+                @endforeach
+            @else
+
+            @endif
         </ul>
 
         <br/><br/>

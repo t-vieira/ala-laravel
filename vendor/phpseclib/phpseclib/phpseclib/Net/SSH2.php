@@ -145,7 +145,6 @@ define('NET_SSH2_LOG_MAX_SIZE', 1024 * 1024);
  *
  * @package Net_SSH2
  * @author  Jim Wigginton <terrafrost@php.net>
- * @version 0.1.0
  * @access  public
  */
 class Net_SSH2
@@ -2258,7 +2257,7 @@ class Net_SSH2
                     return false;
                 default:
                     if (is_callable($callback)) {
-                        $callback($temp);
+                        call_user_func($callback, $temp);
                     } else {
                         $output.= $temp;
                     }

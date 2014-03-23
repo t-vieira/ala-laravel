@@ -7,7 +7,8 @@
         "laravel/framework": "4.1.*",
         "orchestra/asset": "2.0.*",
         "loic-sharma/profiler": "1.1.*",
-        "pda/pheanstalk": "dev-master"
+        "pda/pheanstalk": "dev-master",
+        "mitch/hashids": "1.x"
     },
     "autoload": {
         "classmap": [
@@ -37,6 +38,6 @@
     "config": {
         "preferred-install": "dist"
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "dev"
 }
 
